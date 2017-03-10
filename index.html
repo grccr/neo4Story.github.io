@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>neo4Story</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700" type="text/css">
@@ -16,63 +17,76 @@
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
-            margin: 0px;
+            margin: 0;
+            font-family: "Roboto", sans-serif;
         }
 
         .content-container {
-            position: absolute;
-            right: 25%;
-            top: 22%;
+            display: flex;
+            flex-direction: column;
+            padding: 200px 20%;
         }
 
         .dark-container {
             background: rgba(0, 0, 0, 0.5);
-            min-height: 1606px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
         }
 
         .title-header {
             font-weight: 200;
             color: white;
-            font-family: Roboto;
-            font-size: 5em;
-            margin-bottom: 0.8em;
+            margin: 0;
         }
 
         .subheader {
-            font-family: Roboto;
             color: white;
             font-weight: 200;
-            font-size: 2em;
-            margin-bottom: 1em;
+            font-size: 25px;
+            line-height: 1.2;
+            padding-bottom: 20px;
         }
 
         .gh-btn {
             background: transparent;
             border: 0;
             cursor: pointer;
-            /*margin-right: 10px;*/
         }
 
         .dwn-btn {
             background-color: #E0F2F1;
             height: 40px;
             font-size: 1.2em;
-            font-family: Roboto;
             font-weight: 400;
         }
 
         .dev-stage {
             color: white;
-            font-family: Roboto;
             font-size: 1.3em;
             margin-bottom: 2em;
+        }
+        @media screen and (max-width: 800px){
+            .content-container {
+                padding: 20px;
+                margin: 0 auto;
+            }
+            .dark-container {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="dark-container">
         <div class="content-container">
-            <div class="title-header">neo4Story</div>
+            <h1 class="title-header">neo4Story</h1>
             <div class="subheader">Take data, put it in Neo4J, tell your story.</div>
 
             <div class="dev-stage">Status: 0.9 - in dev stage now. Checkout on GitHub!</div>
